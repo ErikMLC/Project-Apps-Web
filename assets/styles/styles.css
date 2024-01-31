@@ -68,3 +68,7 @@ section,aside {
   padding: 20px; /* Puedes ajustar este valor según tus preferencias */
   border: 1px solid #ddd; /* Borde para visualizar mejor los límites de cada sección */
 }
+
+.bg-aboutus {
+    background-color: #73bda6;
+}
