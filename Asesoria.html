@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+    <section>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Asesoria</li>
+            </ol>
+          </nav>
+          
+    </section>
+<div class="container">
+    <form action="/submit_form" method="post">
+        <label for="fname">Nombre</label>
+        <input type="text" id="fname" name="firstname" placeholder="Tu nombre..">
+
+        <label for="lname">Apellido</label>
+        <input type="text" id="lname" name="lastname" placeholder="Tu apellido..">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico..">
+
+        <label for="date">Fecha de la cita</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Hora de la cita</label>
+        <input type="time" id="time" name="time">
+
+        <input type="submit" value="Reservar">
+    </form>
+</div>
+
+</body>
+</html>
