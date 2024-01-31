@@ -6,32 +6,31 @@ header {
   background-color: #aaf7e0;
 }
 
-h1 {
-  padding: 12px;
-  text-align: center;
-  color: #000000;
-  font-size: 10px;
+h1{
+    padding: 12px;
+    text-align: center;
+    color: #000000;
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-header .nav {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-}
+
 
 header .nav-link {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 header .logo3 {
-  position: relative;
-  left: 1090px;
-  top: -125px;
-  height: 149px;
-  width: 158px;
-  border: 1px solid #ddd;
+    position: relative;
+    left: 1090px;
+    top: -125px;
+    height: 149px;
+    width: 160px;
+    border: 1px solid #ddd;
 }
 
 footer {
@@ -150,3 +149,28 @@ aside {
 .line-through-text {
   text-align: center;
 }
+aside .Information{
+    text-align: justify;
+    padding: 10px;
+    left: 100px;
+}
+
+aside .recording{
+    position: relative;
+    left:300px;
+    width: 50%;
+}
+
+aside .Asesoria{
+    text-align: justify;
+}
+
+.bg-aboutus {
+    background-color: #73bda6;
+}
+
+section .img-responsive{
+    position: relative;
+    left: -80px;
+}
+
