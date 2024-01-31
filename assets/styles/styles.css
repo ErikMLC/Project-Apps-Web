@@ -109,3 +109,44 @@ aside {
 .container-form-contact > input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+.subtitle-contact {
+  padding-left: 12%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#fnames,
+#femail,
+#fphone {
+  margin-bottom: 20px;
+}
+
+.subtitle-appointment {
+  margin-top: 15px;
+}
+
+.container-form-contact > .form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-form-contact > .form-check > .form-check-input {
+  margin-right: 10px; /* Ajusta el margen entre input y label según sea necesario */
+}
+
+.social-icons-contact {
+  text-align: center;
+}
+
+.social-icons-contact > i {
+  padding: 20px 10px;
+  font-size: 50px;
+  margin: 0 100px;
+}
+
+.line-through-text {
+  text-align: center;
+}
