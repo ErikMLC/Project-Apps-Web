@@ -6,31 +6,29 @@ header {
   background-color: #aaf7e0;
 }
 
-h1{
-    padding: 12px;
-    text-align: center;
-    color: #000000;
-    font-size: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+h1 {
+  padding: 12px;
+  text-align: center;
+  color: #000000;
+  font-size: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-
-
 header .nav-link {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
 header .logo3 {
-    position: relative;
-    left: 1090px;
-    top: -125px;
-    height: 149px;
-    width: 160px;
-    border: 1px solid #ddd;
+  position: relative;
+  left: 1090px;
+  top: -125px;
+  height: 149px;
+  width: 160px;
+  border: 1px solid #ddd;
 }
 
 footer {
@@ -133,7 +131,7 @@ aside {
 }
 
 .container-form-contact > .form-check > .form-check-input {
-  margin-right: 10px; /* Ajusta el margen entre input y label según sea necesario */
+  margin-right: 10px;
 }
 
 .social-icons-contact {
@@ -149,28 +147,27 @@ aside {
 .line-through-text {
   text-align: center;
 }
-aside .Information{
-    text-align: justify;
-    padding: 10px;
-    left: 100px;
+aside .Information {
+  text-align: justify;
+  padding: 10px;
+  left: 100px;
 }
 
-aside .recording{
-    position: relative;
-    left:300px;
-    width: 50%;
+aside .recording {
+  position: relative;
+  left: 300px;
+  width: 50%;
 }
 
-aside .Asesoria{
-    text-align: justify;
+aside .Asesoria {
+  text-align: justify;
 }
 
 .bg-aboutus {
-    background-color: #73bda6;
+  background-color: #73bda6;
 }
 
-section .img-responsive{
-    position: relative;
-    left: -80px;
+section .img-responsive {
+  position: relative;
+  left: -80px;
 }
-
