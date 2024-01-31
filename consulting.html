@@ -1,86 +1,383 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - NutriChic</title>
+
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <!-- Añade Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Añade Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Añade estilos personalizados -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
+        .card-header {
+            background-color: #ffcc80;
         }
 
-        form {
-            background-color: #f8f8f8;
-            padding: 20px;
-            border-radius: 10px;
+        .btn-link {
+            color: #333;
+            text-decoration: none;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        input[type="time"] {
-            width: 100%;
-            padding: 12px;
-            margin: 4px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+        .btn-link:hover {
+            color: #666;
+            text-decoration: none;
         }
 
-        input[type="submit"] {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
+        .card {
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        .card-header {
+            padding: 0;
+        }
+
+        .btn-link {
+            font-size: 1.2em;
+            display: block;
+            padding: 0.75em 1.25em;
+            text-align: left;
+            position: relative;
+        }
+
+        .btn-link:after {
+            content: '\f107';
+            position: relative;
+            left: 45em;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 1em;
+        }
+
+        .btn-link.collapsed:after {
+            content: '\f105';
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body p {
+            line-height: 1.6;
+        }
+
+        .card-body ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card-body ul li {
+            margin-bottom: 10px;
+        }
+
+        .card-body ul li::before {
+            content: '\2022';
+            color: #ffcc80;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .card-body a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .card-body a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h1>MENTE SANA EN CUERPO SANO </h1>
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.html">Sobre Nosotros</a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="consulting.html">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+            </ul>
 
-    <section>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Asesoria</li>
-            </ol>
-        </nav>
+            <a href="index.html">
+                <img class="logo3" src="assets/images/Logo3.jpeg" alt="..." width=9% />
+            </a>
+        </div>
 
-    </section>
-    <div class="container">
-        <form action="/submit_form" method="post">
-            <label for="fname">Nombre</label>
-            <input type="text" id="fname" name="firstname" placeholder="Tu nombre..">
-
-            <label for="lname">Apellido</label>
-            <input type="text" id="lname" name="lastname" placeholder="Tu apellido..">
-
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico..">
-
-            <label for="date">Fecha de la cita</label>
-            <input type="date" id="date" name="date">
-
-            <label for="time">Hora de la cita</label>
-            <input type="time" id="time" name="time">
-
-            <input type="submit" value="Reservar">
-        </form>
+          
+    </header>
+    <div class="container mt-5">
+        <div id="accordion">
+            <!-- Pregunta 1 -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué necesito tener de materiales para hacer la dieta?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Necesitas tener una balanza de alimentos, tazas y cucharas medidoras. La dieta que te mandaré
+                            más allá de ser saludable es personalizada, por esta razón necesitarás estos materiales para
+                            poder pesar y medir los alimentos según tus requerimientos individuales.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 2 -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Si por mi trabajo no puedo reunirme por llamada ¿cómo puedo hacer?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Escoge un paquete online y si no puedes reunirte por llamada puedo detallarte todo lo que
+                            necesitas saber por mensaje. Luego de que me envíes la historia clínica completa haría la
+                            dieta para poder enviártela. Así mismo los cheques pueden ser por escrito.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 3 -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Si reserve cita y puse método de pago transferencia, ¿dónde envío la foto?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Por favor envía la foto de tu pago al correo: <a href="mailto:nutrichic@gmail.com"
+                                target="_blank" style="color: #ff5722;"><strong>nutrichic@gmail.com</strong></a></p>
+                        <p>En el asunto del mail déjame tu <strong>nombre completo y el número del pedido.</strong></p>
+                        <p>OJO: Si luego de 24 horas de realizar tu pedido no has enviado la foto del pago, la reserva
+                            se cancela automáticamente.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 4 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            ¿Donde es el consultorio?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>La dirección la doy luego de agendar la cita presencial. En la página web NO te dará la
+                            opción de agendar presencial. Únicamente se realiza reservas en este número: <strong>+593 98
+                                592 7580</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 5 -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="false" aria-controls="collapseFive">
+                            ¿A qué pacientes no atiendes?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>No atiendo a pacientes:</p>
+                        <ul>
+                            <li>Con enfermedades crónicas ó diabetes 1.. Recomendaría que acudan a un nutricionista
+                                especializado en su patología. Tampoco atiendo a pacientes con banda gástrica, balón
+                                gástricos, etc, o pacientes que no consumen carbohidratos.</li>
+                            <li>Personas con antecedentes renales</li>
+                            <li>Personas sedentarias que no estén dispuestas a incluir ejercicio en su día</li>
+                            <li>Veganos ó vegetarianos prácticamente veganos. Recomendaría que acudan a un nutricionista
+                                especializado en nutrición vegana/vegetariana.</li>
+                            <li>Pacientes que desean dietas drásticas y extremistas. Si quieres comer poquito y que te
+                                elimine alimentos, no soy la nutrí para ti.</li>
+                            <li>Dieta keto o sin carbs. Las dietas que hago siempre incluyen carbohidratos así sea el
+                                40% de las calorías totales que se considera ya bajo, pero nunca los elimino.</li>
+                            <li>No trabajo con proteínas vegetales como tofu.</li>
+                            <li>No me especializo en embarazo</li>
+                            <li>No atiendo a deportistas de élite.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 6 -->
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                            aria-expanded="false" aria-controls="collapseSix">
+                            ¿Cuánto tiempo dura la cita?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Online Máximo 20 minutos y presencial son 30 minutos <strong>máximo</strong>.</p>
+                        <p>Debes de llenar una historia clínica previo a la cita para que en el momento de tener la
+                            reunión yo ya haya podido saber tus antecedentes y detalles. En la cita se aprovecha a
+                            evaluar composición corporal y explicar cómo funciona la dieta.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 7 -->
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                            aria-expanded="false" aria-controls="collapseSeven">
+                            ¿Qué pasa si agende una cita y no me presento?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Aplica a citas online o presencial:</p>
+                        <p>Si el paciente se presenta a la consulta pero muy atrasado se cancela la cita (<span
+                                style="text-decoration: underline">se esperan máximo 15 min de la hora
+                                establecida</span>).</p>
+                        <p>La dieta será enviada de todas maneras según los datos que llenaste en la historia clínica;
+                            sin embargo, al no asistir a la cita en el horario establecido se pierde la reunión y
+                            directamente nos veríamos para el chequeo.</p>
+                        <p>La explicación de cómo realizar la dieta se enviará por mensaje.</p>
+                        <p>La cita nutricional NO puede moverse el mismo día. Si se agenda una cita y deseas cambiarla
+                            debe de ser con un mínimo de 3 días de anticipación. Máximo se mueve la fecha 1 vez.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 8 -->
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                            aria-expanded="false" aria-controls="collapseEight">
+                            ¿Qué pasa si no me presento en el chequeo?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Tanto como online ó presencial:</p>
+                        <p>Se espera 15 minutos máximo desde la hora establecida, en el caso de que el paciente no se
+                            presente el chequeo se cancela (sin devolución del dinero). Podrá agendar nuevamente otro
+                            chequeo en este link:</p>
+                        <p><a href="https://nutrichic.com/agendar-chequeo/" target="_blank"
+                                style="color: #ff5722;">https://nutrichic.com/agendar-chequeo/</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 9 -->
+            <div class="card">
+                <div class="card-header" id="headingNine">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
+                            aria-expanded="false" aria-controls="collapseNine">
+                            Pasaron varios meses desde mi chequeo ¿Qué hago?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Ya tocaría sacar cita desde 0 ya que la recomendación es sacar 1 chequeo al mes. Si ya
+                            pasaron más de 3 sin chequeo debes de sacar cita desde cero.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 10 -->
+            <div class="card">
+                <div class="card-header" id="headingTen">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+                            aria-expanded="false" aria-controls="collapseTen">
+                            ¿Puedo reagendar mi chequeo?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Tanto online como presencial los chequeos pueden reagendarse con <strong>3 días *laborables*
+                                de anticipación mínimo.</strong><span style="text-decoration: underline"> Si se avisa el
+                                mismo día no es posible realizar el cambio</span> <span
+                                style="text-decoration: underline">si no hay espacios disponibles,</span> ni hay
+                            devolución de dinero.</p>
+                        <p>El chequeo puede reagendarse máximo 1 vez, si quiere reagendarlo y postergar la fecha una 2da
+                            ocasión se tendrá que sacar un chequeo nuevo en este link:&nbsp;</p>
+                        <p><a href="https://nutrichic.com/agendar-chequeo/" target="_blank"
+                                style="color: #ff5722;">https://nutrichic.com/agendar-chequeo/</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 11 -->
+            <div class="card">
+                <div class="card-header" id="headingEleven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven"
+                            aria-expanded="false" aria-controls="collapseEleven">
+                            ¿Cómo sé cuándo me toca cambio de dieta?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Por medio de los chequeos, por eso siempre recomiendo continuar reuniéndonos mínimo 1 vez al
+                            mes ó cada 3 semanas agendar un chequeo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+            <p>©2024 Aplicaciones Web</p>
+            <p>All rights reserved.</p>
+        </div>
+          
+    </footer>
+
+    <!-- Añade Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
