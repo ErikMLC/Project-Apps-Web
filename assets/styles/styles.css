@@ -24,11 +24,10 @@ header .nav-link {
 
 header .logo3 {
   position: relative;
-  left: 1090px;
+  left: 1250px;
   top: -125px;
   height: 149px;
   width: 160px;
-  border: 1px solid #ddd;
 }
 
 footer {
