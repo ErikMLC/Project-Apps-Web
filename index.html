@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - NutriChic</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+        background: linear-gradient(to bottom, #aaf7e0 0%, #ffffff 100%);
+        }
+
+        
+        footer {
+        background: linear-gradient(to bottom, #ffffff 0%, #aaf7e0 100%);
+        padding: 10px;
+        }
+        .footer-social-icons a {
+            margin-right: 15px;
+            color: #333;
+        }
+
+        .footer-social-icons a:hover {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+
+            header h1,
+            .logoImagen3 {
+                text-align: center;
+                position: static;
+            }
+
+            .logoImagen3 {
+                margin-top: 15px;
+            }
+        }
+
+        .carousel-container {
+            max-width: 70%; /* Disminuir para un carrusel más estrecho */
+            margin: auto; /* Centra el carrusel horizontalmente */
+        }
+        .carousel-inner {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .carousel-item img {
+            width: 100%; /* Controla el ancho de la imagen */
+            max-height: 300px; /* Establece una altura máxima para las imágenes */
+            object-fit: cover;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000; /* Fondo más visible y elegante */
+            border-radius: 50%; /* Forma circular */
+            padding: 10px; /* Espaciado interno */
+        }
+        .carousel-indicators li {
+            background-color: #000;
+        }
+        .carousel-caption {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            display: inline-block;
+            bottom: 10%;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            padding: 1rem;
+            text-align: left;
+        }
+        .carousel-caption h5 {
+            color: #000;
+        }
+        .carousel-caption p {
+            color: #555;
+        }
+
+          /* Estilo para el botón fijo */
+          .floating-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+        }
+
+        /* Estilo para la caja de chat */
+        .chat-box {
+            position: fixed;
+            bottom: 80px; /* Ajusta esto según el tamaño del botón de acción */
+            right: 25px;
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 998;
+        }
+
+        
+
+        .service-section {
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+
+        .service-icons i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff; /* Color azul de Bootstrap para los iconos */
+        }
+
+        .service-icons p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .service-box {
+            margin: 20px 0;
+        }
+
+        .card-flip {
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 2.0s;
+            transform-style: preserve-3d;
+        }
+        .card-flip:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .card-front {
+            background-color: #f75555;
+            color: black;
+        }
+        .card-back {
+            background-color: #007bff;
+            color: rgb(29, 24, 24);
+            transform: rotateY(180deg);
+        }
+
+        .Asesoria{
+          text-align: justify;
+        }
+
+        .card-text{
+          text-align: justify;
+        }
+
+        .DrSalud{
+          text-align: justify;
+        }
+
+        img.rounded {
+        border-radius: 10px; /* Bordes curvos */
+        }
+
+        img.shadow {
+            box-shadow: 0px 4px 8px rgba(231, 218, 218, 0.1); /* Sombra */
+        }
+
+        .card:first-child {
+        margin-left: 70px; 
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header class="text-center mb-4">
+        <h1>MENTE SANA EN CUERPO SANO</h1>
+        <div class="container mt-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consulting.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <img class="logoImagen3" src="assets/images/Logo3.png" alt="..." width="150px">
+        </div>
+    </header>
+
+
+  <section>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExample" data-slide-to="1"></li>
+          <li data-target="#carouselExample" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="assets/Images/Salud1.jpg" class="d-block w-100" alt="..." >
+              <div class="carousel-caption">
+                  <h5>Plan $30.00</h5>
+                  <p>Este plan está diseñado para personas que desean mantener un peso saludable y mejorar su salud general.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="assets/Images/Salud2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                  <h5>Plan $50.00</h5>
+                  <p> Este plan está dirigido a personas que desean perder peso de forma gradual y sostenible.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="assets/Images/Salud3.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                  <h5>Plan $70.00</h5>
+                  <p>Este plan está diseñado para personas que desean un enfoque más intensivo para perder peso y mejorar su salud.</p>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span  class="visually-hidden">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span  class="visually-hidden">Siguiente</span>
+      </a>
+
+  </div>
+  <br>
+  <br>
+
+  </section>
+
+      <!-- Caja de chat -->
+      <div class="chat-box">
+          ¡Iniciemos!
+      </div>
+
+      <!-- Botón fijo de acción (bombita) -->
+      <a href="https://wa.link/9dxdn1" class="floating-button">
+        <img src="assets/Images/iconowhats.png" alt="..." width="55">
+      </a>
+
+      
+      <aside>
+        <div class="content">
+          <div class="row gx-3 justify-content-end"> <!-- Agregado justify-content-end para alinear a la derecha -->
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <div class="card" style="width: 18rem;">
+                <img src="assets/images/Comida.jpeg" class="card-img-top img-fluid " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Comida</h5>
+                  <p class="card-text">Prioriza el consumo de frutas, verduras, granos enteros, proteínas magras y grasas saludables para mantener un equilibrio nutricional adecuado. </p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <div class="card" style="width: 18rem;">
+                <img src="assets/images/Deporte.jpeg" class="card-img-top img-fluid " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Deporte</h5>
+                  <p class="card-text">Mantente bien hidratado antes, durante y después del ejercicio. Bebe agua regularmente y considera el uso de bebidas deportivas para reponer electrolitos perdidos durante entrenamientos intensos o de larga duración. </p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-12 col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="assets/images/Imagen2.jpeg" class="card-img-top img-fluid " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Salud</h5>
+                  <p class="card-text">Programa chequeos médicos regulares y exámenes de detección para identificar y tratar cualquier problema de salud de manera temprana. </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </aside>
+      
+
+      <section>
+        <div class="container-fluid service-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>DrSalud</h2>
+                    <p class="DrSalud">Ofrezco un servicio de asesoramiento nutricional personalizado disponible las 24 horas del día, los 7 días de la semana, 
+                      diseñado para ayudarte a alcanzar tus objetivos de salud y bienestar. Con mi servicio, tendrás acceso a orientación profesional en nutrición y podrás coordinar consultas personalizadas conmigo para abordar tus necesidades específicas.</p>
+                    <div class="row service-icons">
+                        <!-- Icono 1 -->
+                        <div class="col-sm-4 service-box">
+                            <i class="fas fa-clock"></i>
+                            <p>Servicio 24/7</p>
+                        </div>
+                        <!-- Icono 2 -->
+                        <div class="col-sm-4 service-box">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Accede a través de distintos canales</p>
+                        </div>
+                        <!-- Icono 3 -->
+                        <div class="col-sm-4 service-box">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <p>Evita hacer reembolsos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Asegúrate de reemplazar 'ruta-imagen-doctor.png' con la ruta correcta de tu imagen -->
+                    <img src="assets/Images/nutricionsaludable2.jpg" alt="Doctor" class="img-fluid rounded shadow" width="300" height="500">
+                    <img src="assets/Images/asesoramiento nutricional y deportivo.jpg" alt="Doctor" class="img-fluid rounded shadow" width="330" height="500">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <aside>
+      <br>
+      <article class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="text-section text-">
+                      <h3>#Asesoría Nutricional</h3>
+                      <p class="Asesoria">
+                        La base de una alimentación saludable radica en el equilibrio y la variedad. Para asegurar una nutrición adecuada, es fundamental incluir 
+                        una amplia gama de alimentos en tu dieta diaria. 
+                        Comienza priorizando el consumo de frutas y verduras frescas, 
+                        ya que son una excelente fuente de vitaminas, minerales y antioxidantes. 
+                        Trata de incluir al menos cinco porciones al día, optando por una variedad de colores 
+                        para obtener diferentes nutrientes. Los carbohidratos complejos, como los granos enteros 
+                        (arroz integral, quinoa, avena) y las legumbres (frijoles, lentejas, garbanzos), 
+                        son una fuente importante de energía y fibra. Asegúrate de incorporarlos en tus comidas 
+                        para mantener niveles de energía estables y promover la salud digestiva. 
+                        
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="video-section">
+                      <video class="recording img-fluid" controls style="max-width: 100%;">
+                          <source src="assets/videos/Asesoría Nutricional.mp4" type="video/mp4">
+                          Tu navegador no soporta el elemento de video.
+                      </video>
+                  </div>
+              </div>
+          </div>
+      </article>
+  </aside>
+  
+
+  <footer class="mt-4">
+        <div class="container text-center">
+            <div class="footer-social-icons mb-3">
+                <a href="https://www.tiktok.com/@nutrithick?_t=8kTAQjoZj1i&_r=1"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="https://www.instagram.com/nutrichicalimentos?igsh=YXo5bzI5Ym03Nzhp"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100068208544961&mibextid=ZbWKwL"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://youtube.com/@NutriChic?si=NXHkQviZPD9MRbTv"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+            <p>©2024 Aplicaciones Web</p>
+            <p>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+</body>
+
+</html>
