@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas Frecuentes - NutriChic</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="assets\styles\styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
-
-
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css">
 </head>
 
 <body>
@@ -28,22 +23,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="about.html">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="FAQ.html">Preguntas Frecuentes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contacto</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Blog</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FAQ.html">Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
                     </ul>
                 </div>
             </nav>
@@ -52,20 +36,12 @@
     </header>
 
     <div class="container mt-5">
-        <div id="blog-content">
-            <!-- Aquí se inyectarán dinámicamente las entradas del blog -->
-        </div>
+        <div id="blog-content"><!-- Aquí se inyectarán dinámicamente las entradas del blog --></div>
     </div>
 
-    <!-- Caja de chat -->
-    <div class="chat-box">
-        ¡Iniciemos!
-    </div>
-
-    <!-- Botón fijo de acción (bombita) -->
-    <a href="https://wa.link/9dxdn1" class="floating-button">
-        <img src="assets/images/iconowhats.png" alt="..." width="55">
-    </a>
+    <div class="chat-box">¡Iniciemos!</div>
+    <a href="https://wa.link/9dxdn1" class="floating-button"><img src="assets/images/iconowhats.png" alt="..."
+            width="55"></a>
 
     <footer class="mt-4">
         <div class="container text-center">
@@ -83,64 +59,36 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS, jQuery y DataTables -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            $('#example').DataTable({
-                ajax: {
-                    url: 'http://127.0.0.1:8080/blog', // URL de tu endpoint
-                    dataSrc: '' // Usando '' porque el array de objetos es el documento JSON directamente
-                }, // Ajusta esta URL a tu endpoint correcto
-                columns: [
-                    { data: 'categoria' },
-                    { data: 'titulo' },
-                    { data: 'contenido' }
-                ]
-            });
-        });
-    </script>
-
-
-    <script>
-        $(document).ready(function () {
-            $('#alertSuccess').hide();
-            $('#alertError').hide();
             mostrarEntradas();
-
         });
 
-
-        // Función para mostrar las entradas en la página
         function mostrarEntradas() {
             $("#blog-content").html("");
             $.getJSON("http://127.0.0.1:8080/blog", function (data) {
-                console.log(data);
                 data.forEach(entrada => {
-                    // Formatear la fecha
                     const fecha = new Date(entrada.fecha);
                     const fechaFormateada = `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`;
 
                     var productToAppend = `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">${entrada.titulo}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">${entrada.categoria.categoria} - ${fechaFormateada}</h6>
-                        <p class="card-text">${entrada.contenido}</p>
-                    </div>
-                </div>`;
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">${entrada.titulo}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${entrada.categoria.categoria} - ${fechaFormateada}</h6>
+                                <p class="card-text">${entrada.contenido}</p>
+                            </div>
+                        </div>`;
 
                     $('#blog-content').append(productToAppend);
                 });
-
             });
         }
 
-
-        // Cargar las entradas cuando la página esté lista
         document.addEventListener('DOMContentLoaded', mostrarEntradas);
     </script>
 </body>

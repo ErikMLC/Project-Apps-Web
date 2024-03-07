@@ -10,6 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <!-- Estilos personalizados -->
     <style>
         body {
@@ -70,6 +71,37 @@
             object-fit: cover;
         }
 
+        .carousel-item {
+    height: 70vh; /* Ajustar la altura del carrusel */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para hacer el texto más legible */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff; /* Color del texto */
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        position: static; /* Quitar la posición absoluta en dispositivos pequeños */
+        background-color: transparent; /* Quitar el fondo semitransparente en dispositivos pequeños */
+        padding: 10px;
+    }
+
+    .carousel-caption h5,
+    .carousel-caption p {
+        font-size: 16px; /* Reducir el tamaño del texto en dispositivos pequeños */
+    }
+}
+
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: #000;
@@ -129,8 +161,19 @@
 
 
         .service-section {
+            display: flex;
+            align-items: center;
             background-color: #f8f9fa;
-            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .service-icons {
+                justify-content: center;
+            }
+
+            .service-box {
+                text-align: center;
+            }
         }
 
         .service-icons i {
@@ -194,10 +237,6 @@
             text-align: justify;
         }
 
-        .DrSalud {
-            text-align: justify;
-        }
-
         img.rounded {
             border-radius: 10px;
             /* Bordes curvos */
@@ -210,6 +249,17 @@
 
         .card:first-child {
             margin-left: 70px;
+        }
+
+        #imagesDrSalud {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #drSaludTitle {
+            text-align: center;
         }
     </style>
 </head>
@@ -226,13 +276,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="about.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="FAQ.html">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="consulting.html">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contacto</a>
@@ -257,7 +307,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/Salud1.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/Images/Salud1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
                         <h5>Plan $30.00</h5>
                         <p>Este plan está diseñado para personas que desean mantener un peso saludable y mejorar su
@@ -309,7 +359,7 @@
     <aside>
         <div class="content">
             <div class="row gx-3 justify-content-end"> <!-- Agregado justify-content-end para alinear a la derecha -->
-                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <div class="col col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="assets/images/Comida.jpeg" class="card-img-top img-fluid " alt="...">
                         <div class="card-body">
@@ -320,7 +370,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <div class="col col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="assets/images/Deporte.jpeg" class="card-img-top img-fluid " alt="...">
                         <div class="card-body">
@@ -332,7 +382,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="assets/images/Imagen2.jpeg" class="card-img-top img-fluid " alt="...">
                         <div class="card-body">
@@ -352,9 +402,12 @@
         <div class="container-fluid service-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>DrSalud</h2>
-                    <p class="DrSalud">Ofrezco un servicio de asesoramiento nutricional personalizado disponible las 24 horas del día, los 7 días de la semana, 
-                      diseñado para ayudarte a alcanzar tus objetivos de salud y bienestar. Con mi servicio, tendrás acceso a orientación profesional en nutrición y podrás coordinar consultas personalizadas conmigo para abordar tus necesidades específicas.</p>
+                    <h2 id="drSaludTitle">DrSalud</h2>
+                    <p>Ofrezco un servicio de asesoramiento nutricional personalizado disponible las 24 horas del día,
+                        los 7 días de la semana,
+                        diseñado para ayudarte a alcanzar tus objetivos de salud y bienestar. Con mi servicio, tendrás
+                        acceso a orientación profesional en nutrición y podrás coordinar consultas personalizadas
+                        conmigo para abordar tus necesidades específicas.</p>
                     <div class="row service-icons">
                         <!-- Icono 1 -->
                         <div class="col-sm-4 service-box">
@@ -373,14 +426,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" id="imagesDrSalud">
                     <!-- Asegúrate de reemplazar 'ruta-imagen-doctor.png' con la ruta correcta de tu imagen -->
-                    <img src="assets/Images/nutricionsaludable2.jpg" alt="Doctor" class="img-fluid rounded shadow" width="300" height="500">
-                    <img src="assets/Images/asesoramiento nutricional y deportivo.jpg" alt="Doctor" class="img-fluid rounded shadow" width="290" height="500">
+                    <img src="assets/Images/nutricionsaludable2.jpg" alt="Doctor" class="img-fluid rounded shadow"
+                        width="300" height="500">
+                    <img src="assets/Images/asesoramiento nutricional y deportivo.jpg" alt="Doctor"
+                        class="img-fluid rounded shadow" width="330" height="500">
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <aside>
