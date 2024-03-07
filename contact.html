@@ -16,41 +16,117 @@
     <!-- Boostrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        .initial-title {
+            text-align: center;
+        }
+
+        .container-contact {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container-form-contact {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container-form-contact>input,
+        .container-form-contact>textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 4px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .container-form-contact>input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container-form-contact>input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #fnames,
+        #femail,
+        #fphone {
+            margin-bottom: 20px;
+        }
+
+        .subtitle-appointment {
+            margin-top: 15px;
+        }
+
+        .container-form-contact>.form-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container-form-contact>.form-check>.form-check-input {
+            margin-right: 10px;
+        }
+
+        #button-submit-contact {
+            display: block;
+            margin: 20px auto 0;
+            /* Añade 20px de espacio arriba y centra horizontalmente */
+        }
+    </style>
 </head>
 
 <body class="body-contact">
-    <header>
+    <header class="text-center mb-4">
         <h1>MENTE SANA EN CUERPO SANO</h1>
-        <div class="container">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Sobre Nosotros</a>
-                </li>
-                <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="consulting.html">Preguntas Frecuentes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Contacto</a>
-                </li>
-            </ul>
-            <a href="index.html">
-                <img class="logo3" src="assets/images/Logo3.png" alt="..." width=9% />
-            </a>
+        <div class="container mt-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="FAQ.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <img class="logoImagen3" src="assets/images/Logo3.png" alt="..." width="150px">
         </div>
     </header>
 
     <!-- Titulo -->
-    <h1>Comunícate con Nosotros</h1>
+    <h1 class="initial-title">Comunícate con Nosotros</h1>
 
     <div class="container-contact">
         <!-- Nombres completos -->
-        <form action="/" method="POST" class="container-form-contact">
+        <form class="container-form-contact">
             <div class="form-group">
                 <label for="fnames">Nombres Completos</label>
                 <input type="text" class="form-control" id="fnames" name="names"
@@ -69,39 +145,38 @@
                 <input type="tel" class="form-control" id="fphone" name="phone" placeholder="Ej: 0999999999">
             </div>
 
-            <!-- Horarios -->
             <h6 class="subtitle-appointment">Agenda una cita</h6>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="radio" name="appointmentTime" value="1" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
                     9am - 11am
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="radio" name="appointmentTime" value="2" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
                     11am - 1pm
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="radio" name="appointmentTime" value="3" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
                     1pm - 3pm
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
-                    3am - 5pm
+                <input class="form-check-input" type="radio" name="appointmentTime" value="4" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    3pm - 5pm
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="radio" name="appointmentTime" value="5" id="flexRadioDefault5">
+                <label class="form-check-label" for="flexRadioDefault5">
                     5pm - 7pm
                 </label>
             </div>
@@ -114,26 +189,33 @@
             </div>
 
             <!-- Boton enviar formulario -->
-            <input type="submit" class="btn btn-primary" value="Enviar" id="button-submit-contact">
+            <!-- <input type="submit" class="btn btn-primary" value="Enviar" id="button-submit-contact"> -->
+            <button id="button-submit-contact" type="button" class="btn btn-primary">Enviar</button>
+
         </form>
     </div>
 
-    <div class="line-through-text">
-        <h4>O también por</h4>
+    <!-- Caja de chat -->
+    <div class="chat-box">
+        ¡Iniciemos!
     </div>
 
-    <div class="social-icons-contact">
-        <i class="fab fa-whatsapp"></i>
-        <i class="fab fa-telegram"></i>
-    </div>
+    <!-- Botón fijo de acción (bombita) -->
+    <a href="https://wa.link/9dxdn1" class="floating-button">
+        <img src="assets/images/iconowhats.png" alt="..." width="55">
+    </a>
 
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+    <footer class="mt-4">
+        <div class="container text-center">
+            <div class="footer-social-icons mb-3">
+                <a href="https://www.tiktok.com/@nutrithick?_t=8kTAQjoZj1i&_r=1"><i class="fab fa-tiktok"></i>
+                    TikTok</a>
+                <a href="https://www.instagram.com/nutrichicalimentos?igsh=YXo5bzI5Ym03Nzhp"><i
+                        class="fab fa-instagram"></i>
+                    Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100068208544961&mibextid=ZbWKwL"><i
+                        class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://youtube.com/@NutriChic?si=NXHkQviZPD9MRbTv"><i class="fab fa-youtube"></i> YouTube</a>
             </div>
             <p>©2024 Aplicaciones Web</p>
             <p>All rights reserved.</p>
@@ -145,6 +227,64 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+    <script>
+        $('#button-submit-contact').click(function () {
+            enviarMensajeContacto();
+        });
+
+        function enviarMensajeContacto() {
+            // Obtener los valores de los campos del formulario
+            var nombresPaciente = $('#fnames').val();
+            var emailPaciente = $('#femail').val();
+            var telefonoPaciente = $('#fphone').val();
+            var idHorarioSeleccionado = $('input[type=radio][name=appointmentTime]:checked').val();
+            var mensaje = $('#message').val();
+
+            // Validar campos obligatorios
+            if (nombresPaciente === '' || emailPaciente === '' || mensaje === '') {
+                return;
+            }
+
+            // Crear objeto con los datos del formulario
+            var mensajeContacto = {
+                nombresPaciente: nombresPaciente,
+                emailPaciente: emailPaciente,
+                telefonoPaciente: telefonoPaciente,
+                horario: idHorarioSeleccionado,
+                mensaje: mensaje
+            };
+
+            // Enviar los datos al servidor mediante una solicitud AJAX
+            $.ajax({
+                url: 'http://127.0.0.1:8080/contacto',
+                method: 'POST',
+                data: JSON.stringify(mensajeContacto),
+                dataType: 'text',
+                contentType: 'application/json'
+            })
+                .done(function (data) {
+                    console.log(data);
+                    // $('#alertSuccess').show();
+                    // Limpiar campos del formulario después de enviar con éxito
+                    $('#fnames').val('');
+                    $('#femail').val('');
+                    $('#fphone').val('');
+                    $('input[type=radio][name=appointmentTime]').prop('checked', false);
+                    $('#message').val('');
+                })
+                .fail(function (error) {
+                    console.log(error);
+                    // $('#alertError').show();
+                });
+        }
+    </script>
+
 </body>
 
 </html>

@@ -99,14 +99,6 @@
             text-decoration: underline;
         }
 
-        header .logoImagen3 {
-            position: relative;
-            left: 957px;
-            top: -125px;
-            height: 149px;
-            width: 160px;
-        }
-
         .container .nav li {
             position: relative;
             right: 93px;
@@ -115,34 +107,38 @@
 </head>
 
 <body>
-    <header>
-        <h1>MENTE SANA EN CUERPO SANO </h1>
-        <div class="container">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="about.html">Sobre Nosotros</a>
-                </li>
-                <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li> -->
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Preguntas Frecuentes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contacto</a>
-                </li>
-            </ul>
-
-            <a href="index.html">
-                <img class="logoImagen3" src="assets/images/Logo3.png" alt="..." width=9% />
-            </a>
+    <header class="text-center mb-4">
+        <h1>MENTE SANA EN CUERPO SANO</h1>
+        <div class="container mt-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <img class="logoImagen3" src="assets/images/Logo3.png" alt="..." width="150px">
         </div>
-
-          
     </header>
+
     <div class="container mt-5">
         <div id="accordion">
             <!-- Pregunta 1 -->
@@ -377,13 +373,27 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+    <!-- Caja de chat -->
+    <div class="chat-box">
+        ¡Iniciemos!
+    </div>
+
+    <!-- Botón fijo de acción (bombita) -->
+    <a href="https://wa.link/9dxdn1" class="floating-button">
+        <img src="assets/images/iconowhats.png" alt="..." width="55">
+    </a>
+
+    <footer class="mt-4">
+        <div class="container text-center">
+            <div class="footer-social-icons mb-3">
+                <a href="https://www.tiktok.com/@nutrithick?_t=8kTAQjoZj1i&_r=1"><i class="fab fa-tiktok"></i>
+                    TikTok</a>
+                <a href="https://www.instagram.com/nutrichicalimentos?igsh=YXo5bzI5Ym03Nzhp"><i
+                        class="fab fa-instagram"></i>
+                    Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100068208544961&mibextid=ZbWKwL"><i
+                        class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://youtube.com/@NutriChic?si=NXHkQviZPD9MRbTv"><i class="fab fa-youtube"></i> YouTube</a>
             </div>
             <p>©2024 Aplicaciones Web</p>
             <p>All rights reserved.</p>
